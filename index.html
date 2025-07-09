@@ -1,118 +1,114 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>服务条款 - YOUJIAN铺子</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的 - YOUJIAN铺子</title>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      font-family: "PingFang SC", sans-serif;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif;
       background-color: #fff;
       color: #333;
-      padding: 20px;
-      line-height: 1.8;
     }
-    h1 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
+
+    .top-banner {
+      background-color: #111;
+      padding: 24px 20px 32px;
       text-align: center;
     }
-    h2 {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 10px;
+
+    .top-banner h1 {
+      font-size: 18px;
+      font-weight: 500;
+      background: linear-gradient(to right, #e5c07b, #f2c4c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
     }
-    p {
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-    .back {
-      position: fixed;
-      top: 16px;
-      left: 16px;
-      font-size: 16px;
-      text-decoration: none;
-      color: #333;
-      border: 1px solid #ccc;
-      padding: 6px 10px;
-      border-radius: 6px;
-      background: #f9f9f9;
-    }
-    .updated {
+
+    .card-summary {
+      display: flex;
+      justify-content: space-around;
       text-align: center;
-      margin-top: 30px;
+      padding: 16px 10px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .card-summary div {
       font-size: 13px;
-      color: #888;
+      color: #444;
+    }
+
+    .card-summary div span {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid #f1f1f1;
+      font-size: 15px;
+    }
+
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      background-color: #fff;
+      border-top: 1px solid #e1e1e1;
+    }
+
+    .nav-bar div {
+      flex: 1;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .nav-bar .active {
+      color: #000;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <a class="back" href="mine.html">← 返回</a>
 
-  <h1>YOUJIAN铺子服务条款</h1>
+  <div class="top-banner">
+    <h1>臻选礼遇，只为YOU</h1>
+  </div>
 
-  <h2>1. 知识产权保护</h2>
-  <p>
-    YOUJIAN铺子及其关联方拥有或合法授权使用平台内所有文字、图片、标识、图表、音视频以及软件著作权、商标权等知识产权。未经权利人书面许可，任何单位或个人不得以任何方式复制、传播、展示、修改、发行或用于商业目的。
-  </p>
+  <div class="card-summary">
+    <div><span>7</span> 优惠券</div>
+    <div><span>1</span> YOU卡</div>
+    <div><span>0.00</span> 钱袋</div>
+    <div><span>248</span> 积分</div>
+  </div>
 
-  <h2>2. 隐私保护与数据安全</h2>
-  <p>
-    我们高度重视用户个人信息与隐私安全：<br/>
-    严格遵守《中华人民共和国网络安全法》《个人信息保护法》等相关法律法规。<br/>
-    仅在用户明确同意的范围内收集、使用必要信息。
-  </p>
+  <ul class="list">
+    <li class="list-item">我的订单</li>
+    <li class="list-item">我的客服</li>
+    <li class="list-item">团餐预订</li>
+    <li class="list-item">政策条款</li>
+  </ul>
 
-  <h2>3. 免责声明与合法合规</h2>
-  <p>
-    本平台内容由用户自行发布或自动生成，存在信息不准确风险。YOUJIAN铺子对因第三方发布、传播的信息所导致的任何损失不承担责任。平台将持续完善审核机制，但无法保证所有信息完全无误，用户需自行判断和承担风险。
-  </p>
+  <div class="nav-bar">
+    <div>首页</div>
+    <div>点单</div>
+    <div>百货</div>
+    <div class="active">我的</div>
+  </div>
 
-  <h2>4. 用户责任与权益</h2>
-  <p>
-    您同意：<br/>
-    遵守所有适用的法律法规。<br/>
-    不使用我们的服务从事任何非法活动。<br/>
-    不干扰或破坏我们的服务或服务器。<br/>
-    不尝试未经授权访问我们的系统或网络。<br/>
-    遵守国家法律法规，不得发布违法违规、侵权他人合法权益的内容。
-  </p>
-  <p>
-    您有权益：<br/>
-    查询、更正、删除本人个人信息，并可随时取消授权。<br/>
-    保护您的帐户安全。
-  </p>
-
-  <h2>5. 赔偿</h2>
-  <p>
-    您同意赔偿。这些索赔源于：<br/>
-    (a)您在使用和访问我们的服务中，对我们造成不良影响；<br/>
-    (b)您违反本服务条款的任何条款；<br/>
-    (c)您未经授权转载或盗用我们的代码；<br/>
-    (d)您侵犯任何第三方的权利，包括但不限于任何版权、财产或隐私权。
-  </p>
-
-  <h2>6. 修改条款</h2>
-  <p>
-    我们保留随时修改或替换这些条款的权利。如果修改是重大的，新条款将延迟至少七天才生效。继续使用我们的应用将构成您对新条款的接受。
-  </p>
-
-  <h2>7. 终止</h2>
-  <p>
-    我们可以随时因任何原因终止或暂停您对我们服务的访问，恕不另行通知，包括但不限于您违反这些条款。终止后，您使用服务的权利将立即停止。
-  </p>
-
-  <h2>8. 适用法律</h2>
-  <p>
-    这些条款应受中华人民共和国法律管辖并按其解释，不考虑其冲突法规定。
-  </p>
-
-  <h2>9. 联系我们</h2>
-  <p>
-    如果您对本服务条款有任何疑问，请通过发送电子邮件至 <strong>1825333426@qq.com</strong> 与我们联系。
-  </p>
-
-  <p class="updated">感谢您使用我们的应用。<br/>更新日期：2025年07月08日</
+</body>
+</html>
