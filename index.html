@@ -1,109 +1,63 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>政策条款 - YOUJIAN铺子</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>会员福利 - YOUJIAN铺子</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "PingFang SC", sans-serif;
       background: #fff;
       color: #333;
-      line-height: 1.6;
-      padding: 0 20px 40px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    /* 顶部返回+标题 */
+    /* 顶部返回 + 标题 */
     .header {
       display: flex;
       align-items: center;
-      height: 50px;
+      padding: 16px 20px;
       border-bottom: 1px solid #eee;
     }
     .header .back {
-      font-size: 24px;
-      text-decoration: none;
-      color: #333;
-      line-height: 1;
-      margin-right: 8px;
+      display: inline-block;
+      width: 24px; height: 24px;
+      margin-right: 12px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M621.3 901.7L219.9 500.7l401.4-401c12.5-12.4 12.6-32.6.2-45.1-12.5-12.5-32.7-12.5-45.2 0L158.8 478.1c-12.5 12.5-12.5 32.7 0 45.2l417.5 417.5c12.4 12.5 32.6 12.5 45.1.2 12.5-12.5 12.5-32.7 0-45.1z" fill="%23999"/></svg>') no-repeat center/contain;
+      cursor: pointer;
     }
     .header .title {
       font-size: 18px;
       font-weight: bold;
+      color: #333;
     }
-    /* 店铺名副标题 */
-    .subtitle {
+    /* 正文提示 */
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
       text-align: center;
-      font-size: 16px;
-      color: #666;
-      margin: 12px 0 20px;
-    }
-    /* 正文区域 */
-    .content h2 {
-      margin-top: 24px;
-      margin-bottom: 12px;
-      font-size: 20px;
-      font-weight: bold;
     }
     .content p {
-      margin-bottom: 16px;
-      text-indent: 2em;
-      font-size: 16px;
-    }
-    /* 结尾感谢与日期 */
-    .footer-note {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #aaa;
-      text-align: center;
+      font-size: 50px;
+      color: #888;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
 
-  <!-- 返回 + 标题 -->
   <div class="header">
-    <a href="profile.html" class="back">&#8592;</a>
-    <div class="title">服务条款</div>
+    <div class="back" onclick="history.back()"></div>
+    <div class="title">会员福利</div>
   </div>
 
-  <!-- 店铺名称 -->
-  <div class="subtitle">YOUJIAN铺子</div>
-
-  <!-- 条款正文 -->
   <div class="content">
-    <h2>1. 知识产权保护</h2>
-    <p>YOUJIAN铺子及其关联方拥有或合法授权使用平台内所有文字、图片、标识、图表、音视频以及软件著作权、商标权等知识产权。未经权利人书面许可，任何单位或个人不得以任何方式复制、传播、展示、修改、发行或用于商业目的。</p>
-
-    <h2>2. 隐私保护与数据安全</h2>
-    <p>我们高度重视用户个人信息与隐私安全：严格遵守《中华人民共和国网络安全法》《个人信息保护法》等相关法律法规。仅在用户明确同意的范围内收集、使用必要信息。</p>
-
-    <h2>3. 免责声明与合法合规</h2>
-    <p>本平台内容由用户自行发布或自动生成，存在信息不准确风险。YOUJIAN铺子对因第三方发布、传播的信息所导致的任何损失不承担责任。平台将持续完善审核机制，但无法保证所有信息完全无误，用户需自行判断和承担风险。</p>
-
-    <h2>4. 用户责任与权益</h2>
-    <p>您同意：遵守所有适用的法律法规；不使用我们的服务从事任何非法活动；不干扰或破坏我们的服务或服务器；不尝试未经授权访问我们的系统或网络；遵守国家法律法规，不得发布违法违规、侵权他人合法权益的内容。您有权益：查询、更正、删除本人个人信息，并可随时取消授权。</p>
-
-    <h2>5. 赔偿</h2>
-    <p>您同意赔偿。这些索赔源于：(a) 您在使用和访问我们的服务中，对我们造成不良影响；(b) 您违反本服务条款的任何条款；(c) 您未经授权转载或盗用我们的代码；(d) 您侵犯任何第三方的权利，包括但不限于任何版权、财产或隐私权。</p>
-
-    <h2>6. 修改条款</h2>
-    <p>我们保留随时修改或替换这些条款的权利。如果修改是重大的，新条款将延迟至少七天才生效。继续使用我们的应用将构成您对新条款的接受。</p>
-
-    <h2>7. 终止</h2>
-    <p>我们可以随时因任何原因终止或暂停您对我们服务的访问，恕不另行通知，包括但不限于您违反这些条款。终止后，您使用服务的权利将立即停止。</p>
-
-    <h2>8. 适用法律</h2>
-    <p>这些条款应受中华人民共和国法律管辖并按其解释，不考虑其冲突法规定。</p>
-
-    <h2>9. 联系我们</h2>
-    <p>如果您对本服务条款有任何疑问，请通过发送电子邮件至 <a href="mailto:1825333426@qq.com">1825333426@qq.com</a> 与我们联系。</p>
-  </div>
-
-  <!-- 感谢与更新日期 -->
-  <div class="footer-note">
-    感谢您使用我们的应用。<br/>
-    更新日期：2025年07月08日
+    <p></p>正在开发，敬请期待</p>
   </div>
 
 </body>
