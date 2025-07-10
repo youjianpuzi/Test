@@ -1,152 +1,132 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>山姆代购 – YOUJIAN铺子</title>
+  <title>商品详情 - YOUJIAN铺子</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: "PingFang SC", sans-serif;
-      background: #00468C;
-      color: #000;
-      line-height: 1.6;
+      font-family:"PingFang SC",sans-serif;
+      background:#f0f2f5;
+      color:#333;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
     }
+    /* 顶部 */
     header {
-      position: fixed; top:0; left:0; right:0;
-      height: 56px;
-      background: #00468C;
-      display: flex; align-items: center;
-      padding: 0 16px;
-      z-index: 10;
+      display:flex;
+      align-items:center;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 1px 4px rgba(0,0,0,0.1);
     }
-    header .back {
-      font-size: 24px; color: #fff;
-      margin-right: 12px;
-      cursor: pointer;
+    .back {
+      font-size:24px;
+      color:#333;
+      cursor:pointer;
+      margin-right:12px;
+      text-decoration:none;
     }
-    header .logo {
-      height: 32px;
+    .title {
+      flex:1;
+      text-align:center;
+      font-size:20px;
+      font-weight:bold;
+      color:#004b98;
     }
-    main {
-      padding: 80px 16px 40px;
-    }
-    .section-title {
-      text-align: center;
-      color: #fff;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-    .section-divider {
-      width: 40px;
-      height: 2px;
-      background: #fff;
-      margin: 0 auto 32px;
-    }
-    .intro {
-      color: #fff;
-      font-size: 14px;
-      margin-bottom: 32px;
-      text-align: center;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 32px;
-    }
+    /* 内容卡片 */
     .card {
-      background: #fff;
-      border-radius: 6px;
-      padding: 12px;
-      text-align: center;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      margin:16px;
+      overflow:hidden;
+      flex:1;
+      display:flex;
+      flex-direction:column;
     }
-    .card img {
-      width: 32px; height: 32px;
-      margin-bottom: 8px;
+    .product-image {
+      width:100%;
+      padding-top:75%; /* 4:3 比例 */
+      background:url("img/product-sample.jpg") center/cover no-repeat;
     }
-    .card h3 {
-      font-size: 16px;
-      margin-bottom: 4px;
-      color: #00468C;
+    .product-info {
+      padding:16px;
+      flex:1;
+      display:flex;
+      flex-direction:column;
     }
-    .card p {
-      font-size: 12px;
-      color: #555;
-      line-height: 1.4;
+    .product-name {
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:8px;
+      color:#004b98;
     }
-    .contact {
-      background: #fff;
-      border-radius: 6px;
-      padding: 16px;
-      text-align: center;
+    .product-desc {
+      font-size:14px;
+      line-height:1.6;
+      color:#555;
+      margin-bottom:16px;
+      flex:1;
     }
-    .contact p {
-      font-size: 14px;
-      margin-bottom: 8px;
-      color: #00468C;
+    .product-price {
+      font-size:20px;
+      font-weight:bold;
+      color:#E54B4B;
+      margin-bottom:16px;
     }
-    .contact a {
-      color: #00468C;
-      font-size: 14px;
-      text-decoration: none;
-      font-weight: bold;
+    /* 底部区域 */
+    .footer {
+      padding:16px;
+      background:#fff;
+      box-shadow:0 -1px 4px rgba(0,0,0,0.1);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .anti-logo {
+      width:48px;
+      height:48px;
+      background:url("img/anti-fake-logo.png") center/contain no-repeat;
+    }
+    .btn-pay {
+      flex:1;
+      margin-left:16px;
+      padding:12px 0;
+      background:#004b98;
+      color:#fff;
+      text-align:center;
+      border-radius:24px;
+      font-size:16px;
+      font-weight:bold;
+      text-decoration:none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="back" onclick="history.back()">←</div>
-    <img class="logo" src="img/sams_logo.png" alt="Sam's Club">
+    <a class="back" onclick="history.back()">←</a>
+    <div class="title">商品详情</div>
   </header>
 
-  <main>
-    <div class="section-title">山姆是谁？</div>
-    <div class="section-divider"></div>
-    <div class="intro">
-      山姆会员商店隶属于世界500强沃尔玛旗下，专注于高端大包装商品，  
-      30多年全球连锁、800+门店、5000万+会员的信赖之选。
+  <div class="card">
+    <div class="product-image"></div>
+    <div class="product-info">
+      <div class="product-name">椰萃（2026首创）</div>
+      <div class="product-desc">
+        天然椰水与鲜榨椰汁黄金比例调和，口感润泽清甜，层次丰富，唇齿留香，尽显纯粹高级。
+      </div>
+      <div class="product-price">¥28.00</div>
     </div>
+  </div>
 
-    <div class="features">
-      <div class="card">
-        <img src="img/icon-quality.svg" alt="品质保证">
-        <h3>品质保证</h3>
-        <p>正品直采，严选优质品牌。</p>
-      </div>
-      <div class="card">
-        <img src="img/icon-bulk.svg" alt="大包装">
-        <h3>大包装</h3>
-        <p>量大更实惠，省心省力。</p>
-      </div>
-      <div class="card">
-        <img src="img/icon-brand.svg" alt="自有品牌">
-        <h3>自有品牌</h3>
-        <p>Member’s Mark，高品质回馈会员。</p>
-      </div>
-      <div class="card">
-        <img src="img/icon-fresh.svg" alt="冷链直送">
-        <h3>冷链直送</h3>
-        <p>生鲜全程冷链，锁鲜到家。</p>
-      </div>
-      <div class="card">
-        <img src="img/icon-variety.svg" alt="品类丰富">
-        <h3>品类丰富</h3>
-        <p>食品、日用、家电，一站购齐。</p>
-      </div>
-      <div class="card">
-        <img src="img/icon-service.svg" alt="专属客服">
-        <h3>专属客服</h3>
-        <p>1对1快速响应，贴心无忧。</p>
-      </div>
-    </div>
-
-    <section class="contact">
-      <p>有山姆代购需求，请联系我 →</p>
-      <a href="mailto:1825333426@qq.com">1825333426@qq.com</a>
-    </section>
-  </main>
+  <div class="footer">
+    <div class="anti-logo" title="防伪查询"></div>
+    <a href="payment.html" class="btn-pay">立即支付</a>
+  </div>
 
 </body>
 </html>
