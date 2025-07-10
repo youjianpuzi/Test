@@ -12,12 +12,12 @@
       color: #333;
       display: flex;
       flex-direction: column;
-      align-items: center;       /* 居中所有内容 */
+      align-items: center;
       min-height: 100vh;
     }
     header {
       width: 100%;
-      max-width: 360px;          /* 缩小整体宽度 */
+      max-width: 360px;
       display: flex;
       align-items: center;
       padding: 16px;
@@ -40,7 +40,7 @@
     }
     .card {
       width: 100%;
-      max-width: 360px;          /* 缩小整体宽度 */
+      max-width: 360px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -49,16 +49,17 @@
       display: flex;
       flex-direction: column;
     }
-    .product-image {
+    /* 修改：使用 <img> 标签完整展示 */
+    .product-image img {
       width: 100%;
-      padding-top: 75%;
-      background: url("img/product-sample.jpg") center/cover no-repeat;
+      height: auto;
+      display: block;
     }
     .product-info {
       padding: 16px;
       display: flex;
       flex-direction: column;
-      align-items: center;       /* 居中商品详情 */
+      align-items: center;
     }
     .product-name {
       font-size: 22px;
@@ -72,7 +73,7 @@
       line-height: 1.6;
       color: #555;
       margin-bottom: 16px;
-      text-align: center;        /* 居中描述 */
+      text-align: center;
     }
     .product-price {
       font-size: 20px;
@@ -81,21 +82,14 @@
     }
     .footer {
       width: 100%;
-      max-width: 360px;          /* 缩小整体宽度 */
+      max-width: 360px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 16px;
       margin-bottom: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .anti-logo {
-      width: 48px;
-      height: 48px;
-      background: url("img/anti-fake-logo.png") center/contain no-repeat;
-      margin-bottom: 12px;
+      justify-content: center;
     }
     .btn-pay {
       width: 80%;
@@ -108,7 +102,9 @@
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      margin-top: 8px;           /* 居中按钮 */
+    }
+    .btn-pay:hover {
+      background: #003d82;
     }
   </style>
 </head>
@@ -120,7 +116,9 @@
   </header>
 
   <div class="card">
-    <div class="product-image"></div>
+    <div class="product-image">
+      <img src="img/product-sample.jpg" alt="商品图片"/>
+    </div>
     <div class="product-info">
       <div class="product-name">椰萃（2026首创）</div>
       <div class="product-desc">
@@ -130,8 +128,8 @@
     </div>
   </div>
 
+  <!-- 删除防伪 Logo，保留支付按钮居中 -->
   <div class="footer">
-    <div class="anti-logo" title="防伪查询"></div>
     <a href="payment.html" class="btn-pay">立即支付</a>
   </div>
 
