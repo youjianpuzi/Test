@@ -12,15 +12,15 @@
       color: #333;
       display: flex;
       flex-direction: column;
-      align-items: center;
       min-height: 100vh;
     }
+    /* 顶部全宽背景 */
     header {
       width: 100%;
-      max-width: 360px;
       display: flex;
       align-items: center;
-      padding: 16px;
+      padding: 0 12px;
+      height: 56px;
       background: #fff;
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
@@ -32,31 +32,31 @@
       text-decoration: none;
     }
     .title {
-      flex:1;
+      flex: 1;
       text-align: center;
       font-size: 20px;
       font-weight: bold;
       color: #004b98;
     }
+    /* 主卡片区域，增加高度以展示更多描述 */
     .card {
-      width: 100%;
-      max-width: 360px;
+      width: 90%;
+      max-width: 380px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 12px 0;
+      margin: 16px auto;
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
-    /* 修改：使用 <img> 标签完整展示 */
     .product-image img {
       width: 100%;
       height: auto;
       display: block;
     }
     .product-info {
-      padding: 16px;
+      padding: 24px 16px; /* 增加上下内边距 */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -64,37 +64,38 @@
     .product-name {
       font-size: 22px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: #004b98;
       text-align: center;
     }
     .product-desc {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
       color: #555;
-      margin-bottom: 16px;
+      margin-bottom: 24px; /* 更多下方间距 */
       text-align: center;
     }
     .product-price {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       color: #E54B4B;
+      margin-bottom: 8px;
     }
+    /* 底部全宽固定区域，高度减少 */
     .footer {
       width: 100%;
-      max-width: 360px;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 16px;
-      margin-bottom: 20px;
+      padding: 8px 0;  /* 减少上下内边距 */
+      box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
       display: flex;
       justify-content: center;
+      position: sticky;
+      bottom: 0;
     }
     .btn-pay {
       width: 80%;
-      max-width: 240px;
-      padding: 12px 0;
+      max-width: 300px;
+      padding: 10px 0;
       background: #004b98;
       color: #fff;
       text-align: center;
@@ -122,13 +123,12 @@
     <div class="product-info">
       <div class="product-name">椰萃（2026首创）</div>
       <div class="product-desc">
-        天然椰水与鲜榨椰汁黄金比例调和，口感润泽清甜，层次丰富，唇齿留香，尽显纯粹高级。
+        天然椰水与鲜榨椰汁黄金比例调和，口感润泽清甜，层次丰富，唇齿留香，透明直采品质保证，让你感受每一口的纯粹高级体验。
       </div>
       <div class="product-price">¥28.00</div>
     </div>
   </div>
 
-  <!-- 删除防伪 Logo，保留支付按钮居中 -->
   <div class="footer">
     <a href="payment.html" class="btn-pay">立即支付</a>
   </div>
