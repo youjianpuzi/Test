@@ -1,150 +1,140 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>山姆会员店代购服务推广</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 50px;
-            background-color: #004B8D;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            z-index: 100;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            margin-left: 15px;
-        }
-        header a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding-top: 60px;
-            padding-bottom: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #004B8D;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        @media (min-width: 600px) {
-            .products {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        .product {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .product-content {
-            padding: 15px;
-        }
-        .product-content h3 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #004B8D;
-        }
-        .product-content p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .contact-button {
-            display: block;
-            width: 90%;
-            max-width: 300px;
-            margin: 40px auto 0 auto;
-            padding: 12px 0;
-            background-color: #004B8D;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 25px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        .contact-button:hover {
-            background-color: #003a6b;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>山姆代购 – YOUJIAN铺子</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: "PingFang SC", sans-serif;
+      background: #00468C; /* 山姆蓝 */
+      color: #000;
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: #00468C;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      color: #fff;
+      font-size: 18px;
+    }
+    header .back {
+      margin-right: 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    main {
+      padding: 80px 16px 40px; /* 顶部留出header和大图 */
+    }
+    .hero {
+      width: 100%;
+      height: 180px;
+      background: url("https://via.placeholder.com/600x180?text=Sam%27s+Club") center/cover no-repeat;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .intro {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      color: #000;
+      margin-bottom: 24px;
+    }
+    .intro h1 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .intro p {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+    }
+    .feature-card h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .feature-card p {
+      font-size: 12px;
+      color: #555;
+    }
+    .contact {
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .contact a {
+      color: #00468C;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="javascript:history.back()">← 返回</a>
-    </header>
-    <main>
-        <div class="container">
-            <h2>山姆招牌商品推荐</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="https://source.unsplash.com/400x300/?beef" alt="商品示意图">
-                    <div class="product-content">
-                        <h3>美国进口安格斯牛排礼盒</h3>
-                        <p>精选优质安格斯牛肉，肉质鲜嫩多汁，满足家庭聚餐的高品质需求。</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://source.unsplash.com/400x300/?donut,chocolate" alt="商品示意图">
-                    <div class="product-content">
-                        <h3>山姆自有品牌巧克力甜甜圈礼盒</h3>
-                        <p>比利时进口巧克力包裹松软甜甜圈，香甜浓郁，是下午茶的甜蜜享受。</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://source.unsplash.com/400x300/?nuts" alt="商品示意图">
-                    <div class="product-content">
-                        <h3>山姆甄选坚果礼盒</h3>
-                        <p>采用烘焙工艺，甄选全球优质坚果，每一口都香脆可口，健康美味。</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://source.unsplash.com/400x300/?wine" alt="商品示意图">
-                    <div class="product-content">
-                        <h3>山姆甄选进口红酒双支装</h3>
-                        <p>从全球知名酒庄直采红酒，口感醇厚柔顺，香气丰富，是尊享美酒的首选。</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://source.unsplash.com/400x300/?vacuum,cleaner" alt="商品示意图">
-                    <div class="product-content">
-                        <h3>无线手持吸尘器</h3>
-                        <p>强劲吸力，续航持久，轻便易操控，为会员打造洁净舒适的家居环境。</p>
-                    </div>
-                </div>
-            </div>
-            <a href="mailto:1825333426@qq.com" class="contact-button">立即通过邮箱联系代购</a>
-        </div>
-    </main>
+
+  <header>
+    <div class="back" onclick="history.back()">←</div>
+    山姆代购
+  </header>
+
+  <main>
+    <!-- 顶部大图 -->
+    <div class="hero"></div>
+
+    <!-- 简介 -->
+    <section class="intro">
+      <h1>为什么选择山姆代购？</h1>
+      <p>山姆会员商店隶属于世界500强沃尔玛，专注于为会员提供优质大包装商品，畅销海内外。</p>
+      <p>现通过 YOUJIAN 铺子，我们为您带来山姆旗舰好物，让您在校园即可享受正规渠道、放心直邮。</p>
+    </section>
+
+    <!-- 五大招牌特色 -->
+    <div class="features">
+      <div class="feature-card">
+        <h2>大包装优惠</h2>
+        <p>更高性价比，省心省力。</p>
+      </div>
+      <div class="feature-card">
+        <h2>品牌保证</h2>
+        <p>正品行货，安全可靠。</p>
+      </div>
+      <div class="feature-card">
+        <h2>海量商品</h2>
+        <p>食品、日用、小电器，一站购齐。</p>
+      </div>
+      <div class="feature-card">
+        <h2>冷链直送</h2>
+        <p>生鲜到家，全程温控。</p>
+      </div>
+      <div class="feature-card">
+        <h2>专属客服</h2>
+        <p>1对1快速响应，贴心服务。</p>
+      </div>
+    </div>
+
+    <!-- 联系方式 -->
+    <section class="contact">
+      <p>有任何代购需求，请联系：</p>
+      <p><a href="mailto:1825333426@qq.com">1825333426@qq.com</a></p>
+    </section>
+  </main>
+
 </body>
 </html>
