@@ -43,11 +43,13 @@
       overflow-y:auto;
       padding:20px;
     }
+    /* 图片：左右各扩展20px */
     .images img {
-      width:100%;
-      border-radius:8px;
-      margin-bottom:16px;
+      display:block;
+      width: calc(100% + 40px);
+      margin: 0 -20px 16px;
       object-fit:cover;
+      border-radius:8px;
     }
     .description {
       background:#fff;
@@ -58,6 +60,20 @@
       line-height:1.6;
       font-size:14px;
     }
+    .description h2 {
+      font-size:16px;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+    /* 保留单一列表 */
+    .description ul {
+      list-style: disc inside;
+      margin-bottom:12px;
+    }
+    .description ul li {
+      margin-left:8px;
+    }
+
     .contact {
       background:#fff;
       border-radius:8px;
@@ -76,10 +92,7 @@
       color:#333;
     }
 
-    /* 底部占位，若不需要可删除 */
-    footer {
-      height:0;
-    }
+    footer { height:0; }
   </style>
 </head>
 <body>
@@ -98,16 +111,13 @@
 
     <!-- 详细介绍 -->
     <section class="description">
-      <h2 style="font-size:16px; font-weight:bold; margin-bottom:8px;">商品简介</h2>
-      <p>
-        这里填写商品的详细介绍。可以包含材质、规格、用途、优点等信息，
-        让用户一眼看懂你的商品特色。例如：
-      </p>
+      <h2>商品简介</h2>
+      <p>这里填写商品的详细介绍。可以包含材质、规格、用途、优点等信息，让用户一眼看懂你的商品特色。例如：</p>
       <ul>
-        <li>• 100% 天然材质，环保健康</li>
-        <li>• 精准工艺，匠心打造</li>
-        <li>• 轻巧便携，适合多场景使用</li>
-        <li>• 独家配方，品质保证</li>
+        <li>100% 天然材质，环保健康</li>
+        <li>精准工艺，匠心打造</li>
+        <li>轻巧便携，适合多场景使用</li>
+        <li>独家配方，品质保证</li>
       </ul>
       <p>更多产品信息，欢迎随时咨询！</p>
     </section>
