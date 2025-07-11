@@ -3,109 +3,82 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>商品详情 - YOUJIAN铺子</title>
+  <title>商品详情 – YOUJIAN铺子</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: "PingFang SC", sans-serif;
-      background: #f0f2f5;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family:"PingFang SC",sans-serif;
+      background:#f5f5f5;
+      color:#333;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
     }
-    /* 顶部全宽背景 */
+    /* 顶部 */
     header {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
-      height: 56px;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      display:flex;
+      align-items:center;
+      padding:16px 20px;
+      background:#fff;
+      box-shadow:0 1px 4px rgba(0,0,0,0.1);
     }
     .back {
-      font-size: 24px;
-      color: #333;
-      cursor: pointer;
-      margin-right: 12px;
-      text-decoration: none;
+      font-size:24px;
+      margin-right:12px;
+      cursor:pointer;
+      text-decoration:none;
+      color:#333;
     }
     .title {
-      flex: 1;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-      color: #004b98;
+      flex:1;
+      text-align:center;
+      font-size:18px;
+      font-weight:bold;
+      color:#000;
     }
-    /* 主卡片区域，增加高度以展示更多描述 */
-    .card {
-      width: 90%;
-      max-width: 380px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 16px auto;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+
+    /* 主内容 */
+    main {
+      flex:1;
+      overflow-y:auto;
+      padding:20px;
     }
-    .product-image img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .images img {
+      width:100%;
+      border-radius:8px;
+      margin-bottom:16px;
+      object-fit:cover;
     }
-    .product-info {
-      padding: 24px 16px; /* 增加上下内边距 */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .description {
+      background:#fff;
+      border-radius:8px;
+      padding:16px;
+      box-shadow:0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom:16px;
+      line-height:1.6;
+      font-size:14px;
     }
-    .product-name {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      color: #004b98;
-      text-align: center;
+    .contact {
+      background:#fff;
+      border-radius:8px;
+      padding:16px;
+      box-shadow:0 1px 4px rgba(0,0,0,0.1);
+      text-align:center;
     }
-    .product-desc {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 24px; /* 更多下方间距 */
-      text-align: center;
+    .contact .label {
+      font-size:16px;
+      font-weight:bold;
+      color:#004b98;
+      margin-bottom:8px;
     }
-    .product-price {
-      font-size: 22px;
-      font-weight: bold;
-      color: #E54B4B;
-      margin-bottom: 8px;
+    .contact .info {
+      font-size:14px;
+      color:#333;
     }
-    /* 底部全宽固定区域，高度减少 */
-    .footer {
-      width: 100%;
-      background: #fff;
-      padding: 8px 0;  /* 减少上下内边距 */
-      box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      position: sticky;
-      bottom: 0;
-    }
-    .btn-pay {
-      width: 80%;
-      max-width: 300px;
-      padding: 10px 0;
-      background: #004b98;
-      color: #fff;
-      text-align: center;
-      border-radius: 24px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .btn-pay:hover {
-      background: #003d82;
+
+    /* 底部占位，若不需要可删除 */
+    footer {
+      height:0;
     }
   </style>
 </head>
@@ -113,25 +86,39 @@
 
   <header>
     <a class="back" onclick="history.back()">←</a>
-    <div class="title">商品详情</div>
+    <div class="title">XX 精选商品</div>
   </header>
 
-  <div class="card">
-    <div class="product-image">
-      <img src="img/product-sample.jpg" alt="商品图片"/>
-    </div>
-    <div class="product-info">
-      <div class="product-name">椰萃（2026首创）</div>
-      <div class="product-desc">
-        天然椰水与鲜榨椰汁黄金比例调和，口感润泽清甜，层次丰富，唇齿留香，透明直采品质保证，让你感受每一口的纯粹高级体验。
-      </div>
-      <div class="product-price">¥28.00</div>
-    </div>
-  </div>
+  <main>
+    <!-- 两张商品图 -->
+    <section class="images">
+      <img src="img/product-detail-1.jpg" alt="商品大图1"/>
+      <img src="img/product-detail-2.jpg" alt="商品大图2"/>
+    </section>
 
-  <div class="footer">
-    <a href="payment.html" class="btn-pay">立即支付</a>
-  </div>
+    <!-- 详细介绍 -->
+    <section class="description">
+      <h2 style="font-size:16px; font-weight:bold; margin-bottom:8px;">商品简介</h2>
+      <p>
+        这里填写商品的详细介绍。可以包含材质、规格、用途、优点等信息，
+        让用户一眼看懂你的商品特色。例如：
+      </p>
+      <ul>
+        <li>• 100% 天然材质，环保健康</li>
+        <li>• 精准工艺，匠心打造</li>
+        <li>• 轻巧便携，适合多场景使用</li>
+        <li>• 独家配方，品质保证</li>
+      </ul>
+      <p>更多产品信息，欢迎随时咨询！</p>
+    </section>
 
+    <!-- 直白联系方式 -->
+    <section class="contact">
+      <div class="label">联系方式</div>
+      <div class="info">1825333426@qq.com</div>
+    </section>
+  </main>
+
+  <footer></footer>
 </body>
 </html>
